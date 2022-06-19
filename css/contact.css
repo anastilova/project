@@ -1,0 +1,478 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  width: 70%;
+  margin: 0 auto;
+}
+
+:root {
+  --blue1: #1F3F68;
+  --blue2: #316099;
+  --blue3: #356EAD;
+  --blue4: #5A98D0;
+  --blue5: #98C3E8;
+}
+
+.nav {
+  display: flex;
+  position: fixed;
+  flex-direction: row;
+  justify-content: space-between;
+  width: 100%;
+  height: 75px;
+  align-items: center;
+  padding-left: 80px;
+  padding-right: 80px;
+  margin-bottom: 60px;
+  background-color: #ffffff;
+}
+.nav__logo, .nav__burger {
+  cursor: pointer;
+}
+
+.title {
+  display: flex;
+  background: url(../img/blogpagehead.svg);
+  background-size: cover;
+  margin-top: 5rem;
+  height: 250px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 3rem;
+}
+.title .title__blog {
+  width: 50%;
+  text-align: center;
+}
+.title .title__blog h1 {
+  margin-bottom: 1.2rem;
+  font-family: "Gilroy";
+  font-size: 44px;
+  line-height: 74px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: #FFFFFF;
+}
+.title .title__blog p {
+  font-family: "Gilroy";
+  font-size: 18px;
+  line-height: 30px;
+  text-align: center;
+  letter-spacing: 0.04em;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+.contact {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+.contact .contact__left {
+  display: flex;
+  flex-direction: column;
+  width: 40%;
+}
+.contact .contact__left .contact__left-adres {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.contact .contact__left .contact__left-adres h2 {
+  font-family: "Gilroy";
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.04em;
+  color: var(--blue1);
+  margin-top: 40px;
+  margin-bottom: 20px;
+}
+.contact .contact__left .contact__left-adres p {
+  font-family: "Gilroy";
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.04em;
+  color: #1F3F68;
+  opacity: 0.6;
+}
+.contact .contact__left .contact__left-adres .contact__left-adres__title {
+  margin-bottom: 12px;
+}
+.contact .contact__left .contact__left-adres .contact__left-adres__title a {
+  font-family: "Gilroy";
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.04em;
+  color: var(--blue1);
+  margin-left: 20px;
+}
+.contact .contact__left .contact__left-adres .contact__left-adres__title a:hover {
+  border-bottom: 2px solid var(--blue1);
+}
+.contact .contact__right {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  padding-left: 50px;
+  padding-top: 30px;
+  padding-bottom: 50px;
+}
+.contact .contact__right form {
+  width: 90%;
+  height: 700px;
+  background: #FFFFFF;
+  box-sizing: border-box;
+  padding: 56px;
+  box-shadow: 5px 10px 50px rgba(16, 112, 177, 0.2);
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+}
+.contact .contact__right form a {
+  height: 100px;
+  text-align: center;
+}
+.contact .contact__right form h2 {
+  font-family: "Gilroy";
+  font-size: 20px;
+  line-height: 22px;
+  letter-spacing: 0.04em;
+  color: var(--blue1);
+  margin-bottom: 40px;
+}
+.contact .contact__right form label {
+  font-family: "Gilroy";
+  font-size: 16px;
+  line-height: 30px;
+  letter-spacing: 0.04em;
+  color: var(--blue1);
+  opacity: 0.8;
+  margin-bottom: -10px;
+}
+.contact .contact__right form input {
+  height: 55px;
+  opacity: 0.4;
+  border: 1px solid var(--blue3);
+  border-radius: 10px;
+  padding-left: 40px;
+}
+.contact .contact__right form textarea {
+  min-height: 144px;
+  resize: none;
+  opacity: 0.4;
+  border: 1px solid var(--blue3);
+  border-radius: 10px;
+  padding: 20px 0 0 39px;
+  font-size: 14px;
+}
+
+.map {
+  margin-bottom: 100px;
+}
+
+.floating-button {
+  text-decoration: none;
+  display: inline-block;
+  width: 210px;
+  height: 55px;
+  line-height: 45px;
+  border-radius: 10px;
+  font-size: 13px;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: white;
+  background: #5A98D0;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  cursor: pointer;
+  border: none;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
+.floating-button:hover {
+  background: #2EE59D;
+  box-shadow: 0 15px 20px rgba(46, 229, 157, 0.7);
+  color: white;
+  transform: translateY(-7px);
+}
+
+@media screen and (max-width: 1001px) {
+  .contact {
+    flex-direction: column;
+  }
+  .contact .contact__left {
+    width: 100%;
+    text-align: center;
+  }
+  .contact .contact__right {
+    width: 100%;
+  }
+}
+footer {
+  width: 95%;
+  height: 130vh;
+  background-color: var(--blue2);
+  border-radius: 0px 200px 0px 0px;
+  z-index: 2;
+}
+footer .footer__talk {
+  width: 70%;
+  margin: 0 auto;
+  margin-top: 95px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+footer .footer__talk .footer__talk-h2 {
+  width: 460px;
+}
+footer .footer__talk-h2 h2 {
+  font-family: "Gilroy";
+  font-size: 34px;
+  line-height: 46px;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  margin-bottom: 30px;
+}
+footer .footer__talk-h2 p {
+  font-family: "Gilroy";
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  opacity: 0.6;
+}
+footer .footer__talk .floating-button {
+  text-decoration: none;
+  display: inline-block;
+  width: 210px;
+  height: 55px;
+  line-height: 45px;
+  border-radius: 10px;
+  margin: 10px 20px;
+  font-size: 14px;
+  text-align: center;
+  letter-spacing: 3px;
+  font-weight: 600;
+  color: white;
+  background: #5A98D0;
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+  cursor: pointer;
+  border: none;
+  font-weight: 400;
+}
+footer .footer__talk .floating-button:hover {
+  background: #2EE59D;
+  box-shadow: 0 15px 20px rgba(46, 229, 157, 0.7);
+  color: white;
+  transform: translateY(-7px);
+}
+
+.about__us {
+  display: flex;
+  margin: 0 auto;
+  width: 70%;
+  justify-content: space-around;
+}
+.about__us-h4 h4 {
+  font-family: "Gilroy";
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  margin-bottom: 20px;
+}
+
+.about__us-link {
+  display: flex;
+  flex-direction: column;
+  width: 165px;
+}
+.about__us-link a {
+  margin-bottom: 10px;
+  text-decoration: none;
+  font-family: "Gilroy";
+  font-size: 13px;
+  line-height: 26px;
+  letter-spacing: 1px;
+  color: #FFFFFF;
+}
+.about__us-link a:hover {
+  text-transform: uppercase;
+}
+
+.footer {
+  display: flex;
+  width: 70%;
+  margin: 0 auto;
+}
+.footer .afrianska {
+  margin-right: 50px;
+}
+.footer .afrianska .afrianska__logo {
+  display: flex;
+  align-items: center;
+  margin-bottom: 25px;
+}
+.footer .afrianska .afrianska__logo img {
+  margin-right: 25px;
+}
+.footer .afrianska .afrianska__logo p {
+  margin-right: 15px;
+  font-family: "Gilroy";
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+}
+.footer .afrianska .afrianska__logo a {
+  text-decoration: none;
+  font-family: "Gilroy";
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+}
+.footer .afrianska .afrianska__logo a:hover {
+  border-bottom: 1px solid;
+}
+.footer .afrianska .afrianska__logo h2 {
+  font-family: "Gilroy";
+  font-size: 30px;
+  line-height: 46px;
+  letter-spacing: 1.2px;
+  color: #FFFFFF;
+}
+
+.reserved {
+  width: 70%;
+  margin: auto;
+  margin-top: 65px;
+  font-family: "Gilroy";
+  font-size: 16px;
+  line-height: 26px;
+  letter-spacing: 0.05em;
+  color: #FFFFFF;
+  opacity: 0.4;
+}
+
+@media screen and (max-width: 1150px) {
+  .our-client .mask > .our-project {
+    margin-bottom: 70px;
+  }
+
+  .mask__logo .mask__logo-grid {
+    display: flex;
+    flex-direction: column;
+  }
+  .mask__logo .mask__logo-grid p {
+    padding: 1px;
+    border-bottom: none;
+  }
+  .mask__logo .mask__logo-grid p:nth-last-child(1) {
+    text-decoration: underline;
+  }
+}
+@media screen and (max-width: 1001px) {
+  .our-client__wrap {
+    width: 90%;
+  }
+
+  footer {
+    margin-top: 0 !important;
+  }
+
+  footer .footer__talk {
+    flex-direction: column;
+  }
+
+  footer .footer__talk .footer__talk-h2 {
+    width: 90%;
+    margin-bottom: 50px;
+  }
+
+  hr {
+    margin-top: 50px !important;
+    margin-bottom: 50px !important;
+  }
+
+  .footer {
+    display: flex;
+    width: 100%;
+    margin: 0 auto;
+    flex-direction: column;
+    align-content: center;
+    flex-wrap: wrap;
+  }
+
+  .about__us {
+    display: flex;
+    margin: 21px auto;
+    width: 70%;
+    justify-content: space-between;
+  }
+
+  .reserved {
+    margin-top: 0;
+  }
+
+  .our-client {
+    height: 250vh;
+  }
+
+  footer {
+    height: 150vh;
+    margin-top: -150vh;
+  }
+}
+@media screen and (max-width: 650px) {
+  .our-client h2 {
+    font-size: 30px;
+  }
+
+  .our-client p {
+    font-size: 15px;
+  }
+
+  footer .footer__talk {
+    width: 100%;
+  }
+
+  .footer__talk-h2 {
+    margin-bottom: 50px;
+    width: 100%;
+  }
+
+  footer .footer__talk-h2 h2 {
+    font-size: 30px;
+  }
+
+  footer .footer__talk-h2 p {
+    font-size: 14px;
+  }
+
+  .footer .afrianska {
+    width: 70%;
+    margin: 0 auto;
+  }
+
+  .about__us {
+    width: 80%;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-bottom: 30px;
+  }
+}/*# sourceMappingURL=contact.css.map */
